@@ -9,7 +9,10 @@ export class AliOssAdapter extends BaseAdapter {
     return nd;
   }
 
-  constructor(private readonly _store: OSS, private readonly prefixPath: string) {
+  constructor(
+    private readonly _store: OSS,
+    private readonly prefixPath: string
+  ) {
     super();
     if (prefixPath.startsWith('/')) throw new Error('prefixPath cannot start with `/`');
   }
