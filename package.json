@@ -1,0 +1,31 @@
+{
+  "name": "ah-memory-fs-alioss",
+  "version": "1.0.2",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "scripts": {
+    "ci": "prettier --check src && tsc -p tsconfig.json --noEmit",
+    "build": "tsc -p tsconfig.json --outDir dist",
+    "prepublishOnly": "npm run ci && npm run build"
+  },
+  "author": "concefly@foxmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/ali-oss": "^6.16.7",
+    "@types/path-browserify": "^1.0.0",
+    "typescript": "^5.0.3",
+    "ah-memory-fs": "^1.0.18",
+    "prettier": "^3.0.2"
+  },
+  "sideEffects": false,
+  "dependencies": {
+    "ah-logger": "^3.2.7",
+    "ali-oss": "^6.17.1"
+  },
+  "peerDependencies": {
+    "ah-memory-fs": "^1.0.18"
+  }
+}
